@@ -16,6 +16,9 @@ router.get('/',function(req,res){
 //   res.sendFile(path.join(__dirname+'/sitemap.html'));
 // });
 
+// serve static files
+app.use(express.static('.'))
+
 //add the router
 app.use('/', router);
 app.listen(process.env.port || 3000);
